@@ -1,3 +1,9 @@
 run = "npm start"
 entrypoint = "server.js"
-hidden = [".env"]
+modules = ["nodejs-20"]
+
+[nix]
+channel = "stable-24_05"
+
+[deployment]
+run = ["sh", "-lc", "npm start"]
